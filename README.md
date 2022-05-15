@@ -1,6 +1,6 @@
 # SheetPresentationController
 
-[![CI Status](https://img.shields.io/travis/Karol Piątek/SheetPresentationController.svg?style=flat)](https://travis-ci.org/Karol Piątek/SheetPresentationController)
+[![CI Status](https://img.shields.io/travis/karolpiateknet/SheetPresentationController.svg?style=flat)](https://travis-ci.org/karolpiateknet/SheetPresentationController)
 [![Version](https://img.shields.io/cocoapods/v/SheetPresentationController.svg?style=flat)](https://cocoapods.org/pods/SheetPresentationController)
 [![License](https://img.shields.io/cocoapods/l/SheetPresentationController.svg?style=flat)](https://cocoapods.org/pods/SheetPresentationController)
 [![Platform](https://img.shields.io/cocoapods/p/SheetPresentationController.svg?style=flat)](https://cocoapods.org/pods/SheetPresentationController)
