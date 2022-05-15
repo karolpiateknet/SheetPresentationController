@@ -28,15 +28,11 @@ public final class SheetPresentationController: UIViewController {
     public init(
         backgroundViewController: UIViewController,
         sheetContentViewController: ScrollableViewController,
-        initialDetent: SheetPresentationBehaviourController.Detent,
-        detents: [SheetPresentationBehaviourController.Detent]
+        sheetPresentationBehaviourController: SheetPresentationBehaviourController
     ) {
         self.backgroundViewController = backgroundViewController
         self.sheetContentViewController = sheetContentViewController
-        controller = SheetPresentationBehaviourController(
-            initialDetent: initialDetent,
-            detents: detents
-        )
+        controller = sheetPresentationBehaviourController
         super.init(nibName: nil, bundle: nil)
         setupView()
     }

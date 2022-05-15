@@ -19,8 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sheetController = SheetPresentationController(
             backgroundViewController: TitleViewController(),
             sheetContentViewController: DefaultScrollableViewController(),
-            initialDetent: .small,
-            detents: [.large, .small]
+            sheetPresentationBehaviourController: SheetPresentationBehaviourController(
+                initialDetent: .small,
+                detents: [.small, .medium]
+            )
         )
         window = UIWindow()
         navigationController.setViewControllers([sheetController], animated: false)

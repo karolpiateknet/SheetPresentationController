@@ -47,7 +47,7 @@ public final class SheetPresentationBehaviourController {
     /// - Parameters:
     ///   - initialDetent: Initial detent.
     ///   - detents: Possible detents switching.
-    init(
+    public init(
         initialDetent: Detent,
         detents: [Detent]
     ) {
