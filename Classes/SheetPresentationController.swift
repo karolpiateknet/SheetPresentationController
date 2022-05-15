@@ -45,8 +45,8 @@ public final class SheetPresentationController: UIViewController {
 // MARK: - Private
 private extension SheetPresentationController {
     func setupView() {
-        addChildViewController(backgroundViewController)
-        addChildViewController(sheetContentViewController)
+        addChild(backgroundViewController)
+        addChild(sheetContentViewController)
         view.addSubview(backgroundViewController.view)
         NSLayoutConstraint.activate([
             backgroundViewController.view.topAnchor.constraint(equalTo: backgroundViewController.view.superview!.topAnchor),
@@ -59,7 +59,7 @@ private extension SheetPresentationController {
             bottomSheetContent: sheetContentViewController.view,
             scrollView: sheetContentViewController.scrollView
         )
-        backgroundViewController.didMove(toParentViewController: self)
-        sheetContentViewController.didMove(toParentViewController: self)
+        backgroundViewController.didMove(toParent: self)
+        sheetContentViewController.didMove(toParent: self)
     }
 }
