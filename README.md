@@ -9,6 +9,26 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```swift
+let sheetPresentationBehaviourController = SheetPresentationBehaviourController(
+    initialDetent: .defaultSmall,
+    detents: [
+        .defaultSmall,
+        .defaultMedium,
+        SheetPresentationBehaviourController.Detent(screenCoveragePercentage: 0.9, isScrollable: true)
+    ]
+)
+sheetPresentationBehaviourController.bottomSheet.topIndicatorHeight = 10
+sheetPresentationBehaviourController.bottomSheet.topIndicatorWidth = 40
+sheetPresentationBehaviourController.bottomSheet.cornerRadius = 20
+sheetPresentationBehaviourController.bottomSheet.topIndicatorColor = .red
+let sheetController = SheetPresentationController(
+    backgroundViewController: TitleViewController(),
+    sheetContentViewController: DefaultScrollableViewController(),
+    sheetPresentationBehaviourController: sheetPresentationBehaviourController
+)
+```
+
 https://user-images.githubusercontent.com/57398986/168480140-6ef3e155-ea1f-4c10-a3ce-bcad3d63a5fe.mov
 
 ## Requirements
