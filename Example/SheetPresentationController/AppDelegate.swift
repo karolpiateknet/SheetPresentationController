@@ -20,8 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             backgroundViewController: TitleViewController(),
             sheetContentViewController: DefaultScrollableViewController(),
             sheetPresentationBehaviourController: SheetPresentationBehaviourController(
-                initialDetent: .small,
-                detents: [.small, .medium]
+                initialDetent: .defaultSmall,
+                detents: [
+                    .defaultSmall,
+                    SheetPresentationBehaviourController.Detent(screenCoveragePercentage: 0.45, isScrollable: true)
+                ]
             )
         )
         window = UIWindow()

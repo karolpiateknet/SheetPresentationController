@@ -9,10 +9,21 @@ import UIKit
 
 /// Class responsible for controlling swipe behavior.
 public final class SheetPresentationBehaviourController {
-    public enum Detent {
-        case large
-        case medium
-        case small
+    public struct Detent {
+        public static let defaultLarge = Detent(screenCoveragePercentage: 0.95, isScrollable: true)
+        public static let defaultMedium = Detent(screenCoveragePercentage: 0.45, isScrollable: false)
+        public static let defaultSmall = Detent(screenCoveragePercentage: 0.2, isScrollable: false)
+
+        let screenCoveragePercentage: CGFloat
+        let isScrollable: Bool
+
+        public init(
+            screenCoveragePercentage: CGFloat,
+            isScrollable: Bool
+        ) {
+            self.screenCoveragePercentage = screenCoveragePercentage
+            self.isScrollable = isScrollable
+        }
     }
 
     private enum Constants {
@@ -175,25 +186,8 @@ private extension SheetPresentationBehaviourController {
 }
 
 private extension SheetPresentationBehaviourController.Detent {
-    var isScrollable: Bool {
-        switch self {
-        case .large:
-            return true
-        case .medium,
-             .small:
-            return false
-        }
-    }
-
     var height: CGFloat {
-        switch self {
-        case .large:
-            return UIScreen.main.bounds.height * 0.9
-        case .medium:
-            return UIScreen.main.bounds.height * 0.45
-        case .small:
-            return UIScreen.main.bounds.height * 0.2
-        }
+        UIScreen.main.bounds.height * screenCoveragePercentage
     }
 
     func state(translation: CGFloat, detents: [Self]) -> Self {
