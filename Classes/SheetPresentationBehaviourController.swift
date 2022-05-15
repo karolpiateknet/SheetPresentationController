@@ -30,6 +30,8 @@ public final class SheetPresentationBehaviourController {
         static let velocityRequiredForDetentChange: CGFloat = 700
     }
 
+    public let bottomSheet = SheetPresentationContainerView()
+
     private var maxHeight: CGFloat {
         detents.max(by: { $0.height < $1.height })?.height ?? 0
     }
@@ -49,8 +51,6 @@ public final class SheetPresentationBehaviourController {
 
     private var detent: Detent
     private var topConstraint = NSLayoutConstraint()
-
-    private let bottomSheet = SheetPresentationContainerView()
 
     private let detents: [Detent]
 

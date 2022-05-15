@@ -19,11 +19,11 @@ public final class SheetPresentationController: UIViewController {
         backgroundViewController.preferredStatusBarStyle
     }
 
+    public let controller: SheetPresentationBehaviourController
+
     private let backgroundViewController: UIViewController
 
     private let sheetContentViewController: ScrollableViewController
-
-    private let controller: SheetPresentationBehaviourController
 
     public init(
         backgroundViewController: UIViewController,

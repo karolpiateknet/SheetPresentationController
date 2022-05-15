@@ -16,16 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let navigationController = UINavigationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let sheetPresentationBehaviourController = SheetPresentationBehaviourController(
+            initialDetent: .defaultSmall,
+            detents: [
+                .defaultSmall,
+                SheetPresentationBehaviourController.Detent(screenCoveragePercentage: 0.45, isScrollable: true)
+            ]
+        )
+        sheetPresentationBehaviourController.bottomSheet.topIndicatorHeight = 10
+        sheetPresentationBehaviourController.bottomSheet.topIndicatorWidth = 40
+        sheetPresentationBehaviourController.bottomSheet.cornerRadius = 20
+        sheetPresentationBehaviourController.bottomSheet.topIndicatorColor = .red
         let sheetController = SheetPresentationController(
             backgroundViewController: TitleViewController(),
             sheetContentViewController: DefaultScrollableViewController(),
-            sheetPresentationBehaviourController: SheetPresentationBehaviourController(
-                initialDetent: .defaultSmall,
-                detents: [
-                    .defaultSmall,
-                    SheetPresentationBehaviourController.Detent(screenCoveragePercentage: 0.45, isScrollable: true)
-                ]
-            )
+            sheetPresentationBehaviourController: sheetPresentationBehaviourController
         )
         window = UIWindow()
         navigationController.setViewControllers([sheetController], animated: false)

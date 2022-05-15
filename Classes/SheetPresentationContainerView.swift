@@ -14,26 +14,26 @@ public final class SheetPresentationContainerView: UIView {
         static let defaultCornerRadius: CGFloat = 48
     }
 
-    var cornerRadius: CGFloat = Constants.defaultCornerRadius {
+    public var cornerRadius: CGFloat = Constants.defaultCornerRadius {
         didSet {
             layer.cornerRadius = cornerRadius
             topIndicatorToContainerConstraint?.constant = cornerRadius / 2
         }
     }
 
-    var topIndicatorColor: UIColor? {
+    public var topIndicatorColor: UIColor? {
         get { topIndicator.backgroundColor }
         set { topIndicator.backgroundColor = newValue }
     }
 
-    var topIndicatorHeight: CGFloat = Constants.defaultScrollIndicatorHeight {
+    public var topIndicatorHeight: CGFloat = Constants.defaultScrollIndicatorHeight {
         didSet {
             topIndicatorHeightConstraint?.constant = topIndicatorHeight
             topIndicator.layer.cornerRadius = topIndicatorHeight / 2
         }
     }
 
-    var topIndicatorWidth: CGFloat = Constants.defaultScrollIndicatorWidth {
+    public var topIndicatorWidth: CGFloat = Constants.defaultScrollIndicatorWidth {
         didSet {
             topIndicatorWidthConstraint?.constant = topIndicatorWidth
         }
@@ -90,7 +90,7 @@ private extension SheetPresentationContainerView {
         let topIndicatorHeightConstraint = topIndicator.heightAnchor.constraint(equalToConstant: topIndicatorHeight)
         let topIndicatorWidthConstraint = topIndicator.widthAnchor.constraint(equalToConstant: topIndicatorWidth)
         self.topIndicatorHeightConstraint = topIndicatorHeightConstraint
-        self.topIndicatorWidthConstraint = topIndicatorHeightConstraint
+        self.topIndicatorWidthConstraint = topIndicatorWidthConstraint
 
         NSLayoutConstraint.activate([
             topIndicator.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
