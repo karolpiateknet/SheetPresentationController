@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SheetPresentationController'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Customizable SheetPresentationController available from iOS 11.'
   s.description      = <<-DESC
     Customizable SheetPresentationController available from iOS 11, similar to UISheetPresentationController.
