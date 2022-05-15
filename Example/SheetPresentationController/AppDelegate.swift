@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             initialDetent: .defaultSmall,
             detents: [
                 .defaultSmall,
-                SheetPresentationBehaviourController.Detent(screenCoveragePercentage: 0.45, isScrollable: true)
+                .defaultMedium,
+                SheetPresentationBehaviourController.Detent(screenCoveragePercentage: 0.9, isScrollable: true)
             ]
         )
         sheetPresentationBehaviourController.bottomSheet.topIndicatorHeight = 10
