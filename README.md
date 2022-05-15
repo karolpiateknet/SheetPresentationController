@@ -22,7 +22,7 @@ pod 'SheetPresentationController'
 
 ## Author
 
-Karol Piątek, karolpiateknet@users.noreply.github.com
+Karol Piątek, https://github.com/karolpiateknet
 
 ## License
 

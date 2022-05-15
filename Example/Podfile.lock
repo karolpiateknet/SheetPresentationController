@@ -1,0 +1,16 @@
+PODS:
+  - SheetPresentationController (0.1.0)
+
+DEPENDENCIES:
+  - SheetPresentationController (from `../`)
+
+EXTERNAL SOURCES:
+  SheetPresentationController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SheetPresentationController: 9f6b0ab2d143e444288efc636ce820fed38b7939
+
+PODFILE CHECKSUM: f4a5e032db9ca7b00e1fee14d72a2d5e1b90120b
+
+COCOAPODS: 1.11.3

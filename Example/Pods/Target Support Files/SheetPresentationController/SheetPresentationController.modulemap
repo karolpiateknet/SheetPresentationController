@@ -1,0 +1,6 @@
+framework module SheetPresentationController {
+  umbrella header "SheetPresentationController-umbrella.h"
+
+  export *
+  module * { export * }
+}
