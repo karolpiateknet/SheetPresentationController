@@ -120,7 +120,8 @@
 				339DA30728310AF100CBF701 /* SheetPresentationContainerView.swift */,
 				339DA30528310ACE00CBF701 /* SheetPresentationController.swift */,
 			);
-			path = Classes;
+			name = Classes;
+			path = Sources/SheetPresentationController/Classes;
 			sourceTree = "<group>";
 		};
 		4047A99601A15728FFEAC67E6490F23E /* Pods-SheetPresentationController_Tests */ = {
