@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "SheetPresentationController",
+    platforms: [
+        .iOS(.v11)
+    ],
     products: [
         .library(
             name: "SheetPresentationController",
